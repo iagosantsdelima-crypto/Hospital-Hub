@@ -1,356 +1,750 @@
-body {
+/* ============================================
+   HOSPITAL HUB — Windows 2000 / IE6 Retro Theme
+   ============================================ */
+
+/* ----- Reset & Base ----- */
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #1e40af);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
-  color: #ffffff;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  backdrop-filter: blur(12px);
-  background: rgba(15, 23, 42, 0.6);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 20px 60px;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-header.scrolled {
-  background: rgba(15, 23, 42, 0.95);
-  padding: 12px 60px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-header h1 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-nav a {
-  color: #cbd5f5;
-  font-weight: 500;
-}
-
-nav a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #0ea5e9;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  width: 100%;
-  color: #38bdf8;
-}
-
-.hero {
-  text-align: center;
-  padding: 160px 20px;
-  background: transparent;
-}
-
-.hero h2 {
-  font-size: 42px;
-  font-weight: 600;
-  max-width: 600px;
-  margin: 0 auto 20px;
-}
-
-button {
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
-}
-
-button:hover {
-  transform: translateY(-3px);
-}
-
-.especialidades {
-    padding: 80px 20px;
-    text-align: center;
-}
-.especialidades h2 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 40px;
-     background: transparent;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    flex-wrap: wrap;
-}
-
-.card {
- background: rgba(255, 255, 255, 0.06);
-  padding: 25px;
-  width: 260px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-.medicos {
-    padding: 80px 20px;
-    text-align: center;
-    background: #f8fafc;
-     background: transparent;
-}
-
-.medicos h2 {
-    font-size: 28px;
-    color: #0f172a;
-    margin-bottom: 40px;
-     background: transparent;
-}
-
-.medicos .card img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
-     background: transparent;
-}
-
-.card {
-    overflow: hidden;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    nav {display: flex;
-        flex-direction: wrap;
-        justify-content: center;
-    }
-    .hero {
-        padding: 80px 20px;
-    }
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-}
-
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
-}
-
-.fade-up.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
-  color: white;
-  font-size: 22px;
-  padding: 16px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
-}
-
-.whatsapp:hover {
-  transform: scale(1.15);
-}
-
-.whatsapp img {
-    width: 30px;
-}
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-.whatsapp {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards, pulse 2s infinite 1s;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
+body {
+  font-family: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
+  font-size: 11px;
+  background-color: #008080; /* classic Win2000 teal desktop */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23008080'/%3E%3Crect width='1' height='1' fill='%23007070' opacity='0.3'/%3E%3C/svg%3E");
+  color: #000000;
+  min-height: 100vh;
+}
+
+/* ----- Win2000 Loader ----- */
 #loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #ffffff;
+  background: #000080;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  gap: 16px;
 }
 
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #e5e7eb;
-  border-top: 5px solid #0ea5e9;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 #loader h1 {
-  font-size: 28px;
-  color: #0ea5e9;
-  animation: fade 1.5s infinite;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-@keyframes fade {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+#loader::after {
+  content: "Iniciando Hospital Hub...";
+  color: #c0c0c0;
+  font-size: 11px;
+  font-family: 'Tahoma', Arial, sans-serif;
 }
-h1, h2, h3 {
+
+/* ----- Win2000 Taskbar (header) ----- */
+header {
+  position: fixed;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, #e0e0e0 0%, #c0c0c0 100%);
+  border-top: 2px solid #ffffff;
+  box-shadow: 0 -1px 0 #808080;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  gap: 2px;
+}
+
+header.scrolled {
+  /* keep same in Win2000 style */
+}
+
+/* Start button */
+header h1 {
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #316ac5 0%, #1e4ea0 100%);
+  border-top: 1px solid #7cb0f2;
+  border-left: 1px solid #7cb0f2;
+  border-right: 1px solid #003099;
+  border-bottom: 1px solid #003099;
+  padding: 2px 8px 2px 6px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+header h1::before {
+  content: "🏥";
+  font-size: 14px;
+}
+
+/* Nav as taskbar items */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 6px;
+  flex: 1;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  background: linear-gradient(to bottom, #f0f0f0 0%, #d8d8d8 100%);
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  padding: 3px 10px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  white-space: nowrap;
+  transition: none;
+}
+
+nav a:hover,
+nav a.active {
+  background: linear-gradient(to bottom, #316ac5 0%, #1e4ea0 100%);
+  color: #ffffff;
+  border-top: 1px solid #7cb0f2;
+  border-left: 1px solid #7cb0f2;
+  border-right: 1px solid #003099;
+  border-bottom: 1px solid #003099;
+}
+
+nav a::after {
+  display: none;
+}
+
+/* Clock on taskbar right */
+nav::after {
+  content: "09:41 AM";
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  background: linear-gradient(to bottom, #c8c8c8 0%, #b8b8b8 100%);
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 2px 8px;
+  margin-left: auto;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+/* ----- Main page wrapper — acts like a browser window ----- */
+body > *:not(header):not(#loader):not(#particles-js):not(.whatsapp) {
+  /* content sits above teal desktop */
+}
+
+/* Browser chrome wrapper */
+.browser-chrome {
+  margin: 10px auto 40px;
+  max-width: 960px;
+  background: #c0c0c0;
+}
+
+.titlebar {
+  background: linear-gradient(to right, #000080, #1084d0);
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: 'Tahoma', Arial, sans-serif;
+}
+
+.titlebar-left::before {
+  content: "🌐";
+  font-size: 12px;
+}
+
+.titlebar-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.titlebar-btn {
+  width: 16px;
+  height: 14px;
+  background: linear-gradient(to bottom, #f0f0f0 0%, #c0c0c0 100%);
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  cursor: default;
+  color: #000;
+  font-weight: bold;
+}
+
+.menubar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  padding: 2px 4px;
+  display: flex;
+  gap: 0;
+}
+
+.menubar span {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  padding: 2px 6px;
+  cursor: default;
+  text-decoration: underline;
+}
+
+.menubar span:first-child { text-decoration-offset: 2px; }
+
+.menubar span:hover {
+  background: #000080;
   color: #ffffff;
 }
 
-p {
-  color: #cbd5f5;
-}
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-#particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top, rgba(56,189,248,0.15), transparent 60%);
-  z-index: -1;
-}
-h2 {
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-nav a.active {
-  color: #38bdf8;
+.toolbar {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  padding: 3px 4px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
-nav a.active::after {
-  width: 100%;
+.toolbar-btn {
+  background: linear-gradient(to bottom, #f8f8f8 0%, #d0d0d0 100%);
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  cursor: default;
+  white-space: nowrap;
 }
-nav a {
-  transition: all 0.3s ease;
+
+.toolbar-btn:hover {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #c8c8c8 100%);
 }
+
+.address-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+}
+
+.address-bar label {
+  font-size: 11px;
+  font-family: 'Tahoma', Arial, sans-serif;
+}
+
+.address-bar input {
+  flex: 1;
+  height: 18px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #ffffff;
+  padding: 0 4px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000080;
+  outline: none;
+}
+
+.content-area {
+  background: #ffffff;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+/* ----- HERO section ----- */
+.hero {
+  background: linear-gradient(to bottom, #000080 0%, #1084d0 100%);
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 2px solid #808080;
+}
+
+.hero h2 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #000080;
+  margin-bottom: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero p {
+  font-size: 12px;
+  color: #c0d8ff;
+  margin-bottom: 16px;
+}
+
+/* ----- Win2000 Buttons ----- */
+button, .btn {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #d0d0d0 100%);
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  padding: 4px 16px;
+  cursor: default;
+  box-shadow: none;
+  border-radius: 0;
+  transition: none;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(to bottom, #d8d8ff 0%, #b0b0e8 100%);
+  transform: none;
+}
+
+button:active, .btn:active {
+  background: linear-gradient(to bottom, #d0d0d0 0%, #f0f0f0 100%);
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ----- PROVA / Social proof ----- */
+.prova {
+  background: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.prova h2 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000080;
+  margin-bottom: 4px;
+}
+
+.prova p {
+  font-size: 11px;
+  color: #000000;
+}
+
+/* ----- DIFERENCIAIS ----- */
+.diferenciais {
+  background: #c0c0c0;
+  padding: 16px 20px;
+  border-bottom: 1px solid #808080;
+}
+
+/* ----- Cards (Win2000 GroupBox style) ----- */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.card {
+  background: #c0c0c0;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  width: 220px;
+  padding: 12px;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: none;
+  border-top: 2px solid #000080;
+  border-left: 2px solid #000080;
+}
+
+.card h3 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #808080;
+  padding-bottom: 4px;
+}
+
+.card p {
+  font-size: 11px;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* ----- ESPECIALIDADES ----- */
+.especialidades {
+  background: #f0f0f0;
+  padding: 20px;
+  border-bottom: 2px solid #808080;
+  text-align: center;
+}
+
+.especialidades h2 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000080;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: #ffffff;
+  display: inline-block;
+}
+
+/* ----- MEDICOS ----- */
+.medicos {
+  background: #ffffff;
+  padding: 20px;
+  border-bottom: 2px solid #808080;
+  text-align: center;
+}
+
+.medicos h2 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000080;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  background: linear-gradient(to right, #000080, #1084d0);
+  color: #ffffff;
+  display: inline-block;
+}
+
+.medicos .card {
+  background: #c0c0c0;
+  width: 200px;
+}
+
 .medicos .card img {
   width: 100%;
-  height: 220px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0;
+  margin-bottom: 8px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
+
 .medicos span {
   display: block;
-  color: #38bdf8;
-  font-weight: 500;
-  margin-bottom: 5px;
+  color: #000080;
+  font-weight: bold;
+  font-size: 11px;
+  margin-bottom: 4px;
 }
 
 .medicos p {
-  font-size: 14px;
-  color: #cbd5f5;
-  margin-bottom: 10px;
+  font-size: 11px;
+  color: #333333;
+  margin-bottom: 6px;
 }
 
 .rating {
-  color: #facc15;
-  margin-bottom: 15px;
-  font-size: 14px;
+  color: #000080;
+  margin-bottom: 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 .medicos .card button {
   width: 100%;
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 14px;
-}
-.prova {
-  text-align: center;
-  padding: 60px 20px;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #d0d0d0 100%);
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  border-radius: 0;
+  padding: 4px;
+  font-size: 11px;
+  font-family: 'Tahoma', Arial, sans-serif;
 }
 
-.prova h2 {
-  color: #38bdf8;
-  font-size: 28px;
-}
-.cta {
+/* ----- CONTATO ----- */
+.contato {
+  background: #c0c0c0;
+  padding: 20px;
+  border-bottom: 2px solid #808080;
   text-align: center;
-  padding: 80px 20px;
+}
+
+.contato h2 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000080;
+  margin-bottom: 8px;
+}
+
+.contato p {
+  font-size: 11px;
+  color: #000000;
+}
+
+/* ----- CTA ----- */
+.cta {
+  background: linear-gradient(to bottom, #000080, #1084d0);
+  text-align: center;
+  padding: 24px 20px;
+}
+
+.cta h2 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 0 #000040;
+}
+
+.cta button {
+  background: linear-gradient(to bottom, #f8f8f8 0%, #d0d0d0 100%);
+  color: #000080;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  font-weight: bold;
+  padding: 6px 20px;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  background: #c0c0c0;
+  border-top: 2px solid #808080;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 11px;
+  color: #000000;
+  font-family: 'Tahoma', Arial, sans-serif;
+}
+
+/* ----- Section headings global ----- */
+h1, h2, h3 {
+  font-family: 'Tahoma', Arial, sans-serif;
+  color: #000000;
+}
+
+p {
+  font-family: 'Tahoma', Arial, sans-serif;
+  color: #000000;
+}
+
+/* ----- WhatsApp floating btn — styled as Win2000 taskbar icon ----- */
+.whatsapp {
+  position: fixed;
+  bottom: 36px;
+  right: 8px;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #c0c0c0 100%);
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  border-radius: 0;
+  padding: 3px 4px;
+  box-shadow: none;
+  animation: none;
+  opacity: 1;
+  transform: none;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp:hover {
+  transform: none;
+  background: linear-gradient(to bottom, #d8d8ff 0%, #a0a0c0 100%);
+}
+
+.whatsapp img {
+  width: 18px;
+  height: 18px;
+  image-rendering: pixelated;
+}
+
+/* ----- Particles off — not Win2000 ----- */
+#particles-js {
+  display: none;
+}
+
+body::before {
+  display: none;
+}
+
+/* ----- Win2000 scrollbar look (webkit) ----- */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+}
+
+::-webkit-scrollbar-button {
+  background: linear-gradient(to bottom, #e0e0e0, #c0c0c0);
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  height: 16px;
+  width: 16px;
+}
+
+/* ----- Status bar at bottom of browser chrome ----- */
+.statusbar {
+  background: linear-gradient(to bottom, #e0e0e0 0%, #c8c8c8 100%);
+  border-top: 1px solid #808080;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  gap: 8px;
+}
+
+.statusbar span {
+  font-size: 11px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  color: #000000;
+  border-right: 1px solid #808080;
+  padding-right: 8px;
+}
+
+/* ----- Fade animation stripped — Win2000 doesn't do that ----- */
+.fade-up {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* ----- Section divider ----- */
+.section-title-bar {
+  background: linear-gradient(to right, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+  font-family: 'Tahoma', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ----- Selection color ----- */
+::selection {
+  background: #000080;
+  color: #ffffff;
+}
+
+/* ----- IE6 "visited" link style ----- */
+a:visited {
+  color: #800080;
+}
+
+a {
+  color: #000080;
+}
+
+/* Mobile (kept minimal for the aesthetic) */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+  nav {
+    display: none;
+  }
+  header h1 {
+    font-size: 10px;
+  }
 }

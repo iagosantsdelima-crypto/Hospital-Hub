@@ -1,232 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<body>
-    <div id="particles-js"></div>
-    <div id="loader">
-  <h1>Hospital Hub</h1>
-</div>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital hub</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Hub - Microsoft Internet Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tahoma / MS Sans Serif look-alike via Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
+  <!-- ====== WIN2000 LOADING SCREEN ====== -->
+  <div id="loader">
+    <h1>Hospital Hub</h1>
+  </div>
+
+  <!-- ====== TASKBAR (fixed bottom) ====== -->
+  <header>
+    <h1>Hospital Hub</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#especialidades">Especialidades</a>
+      <a href="#medicos">Médicos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ====== BROWSER CHROME WRAPPER ====== -->
+  <div class="browser-chrome">
+
+    <!-- Title bar -->
+    <div class="titlebar">
+      <div class="titlebar-left">Hospital Hub — Microsoft Internet Explorer</div>
+      <div class="titlebar-buttons">
+        <div class="titlebar-btn">_</div>
+        <div class="titlebar-btn">□</div>
+        <div class="titlebar-btn" style="background:linear-gradient(to bottom,#f08080,#c04040);color:#fff;">✕</div>
+      </div>
+    </div>
+
+    <!-- Menu bar -->
+    <div class="menubar">
+      <span>Arquivo</span>
+      <span>Editar</span>
+      <span>Exibir</span>
+      <span>Favoritos</span>
+      <span>Ferramentas</span>
+      <span>Ajuda</span>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <div class="toolbar-btn">◀ Voltar</div>
+      <div class="toolbar-btn">Avançar ▶</div>
+      <div class="toolbar-btn">✕ Parar</div>
+      <div class="toolbar-btn">↻ Atualizar</div>
+      <div class="toolbar-btn">🏠 Início</div>
+      <div class="address-bar">
+        <label>Endereço:</label>
+        <input type="text" value="http://www.hospitalhub.com.br/index.html" readonly />
+      </div>
+      <div class="toolbar-btn">Ir ▶</div>
+    </div>
+
+    <!-- Content area -->
+    <div class="content-area">
+
+      <!-- ====== HERO ====== -->
+      <section id="inicio" class="hero">
+        <h2>Atendimento médico rápido, seguro e sem filas</h2>
+        <p>Agende sua consulta em minutos com especialistas qualificados</p>
+        <br>
+        <button onclick="window.open('https://wa.me/5561984175558')">
+          📞 Agendar pelo WhatsApp
+        </button>
+      </section>
+
+      <!-- ====== PROVA SOCIAL ====== -->
+      <section id="inicio" class="prova">
+        <h2>★ Mais de 5.000 pacientes atendidos ★</h2>
+        <p>Excelência e confiança no cuidado com sua saúde</p>
+
+        <!-- Diferenciais -->
+        <section class="diferenciais">
+          <div class="section-title-bar">🏆 Nossos Diferenciais</div>
+          <div class="cards">
+            <div class="card">
+              <h3>⚡ Atendimento rápido</h3>
+              <p>Sem filas e com agendamento imediato</p>
+            </div>
+            <div class="card">
+              <h3>✔ Profissionais qualificados</h3>
+              <p>Médicos experientes e certificados</p>
+            </div>
+            <div class="card">
+              <h3>🖥 Estrutura moderna</h3>
+              <p>Equipamentos de última geração</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====== CONTATO inside prova (original structure kept) ====== -->
+        <section id="contato" class="contato">
+          <h2>📧 Contato</h2>
+          <p>Fale conosco pelo WhatsApp ou telefone.</p>
+        </section>
+
+      </section>
+
+      <!-- ====== ESPECIALIDADES ====== -->
+      <section id="especialidades" class="especialidades">
+        <div class="section-title-bar">🩺 Nossas Especialidades</div>
+        <div class="cards">
+          <div class="card">
+            <h3>🔬 Biomédico</h3>
+            <p>Cuidados com o coração e sistema cardiovascular.</p>
+          </div>
+          <div class="card">
+            <h3>👶 Pediatria</h3>
+            <p>Atendimento completo para crianças e adolescentes.</p>
+          </div>
+          <div class="card">
+            <h3>🦴 Ortopedia</h3>
+            <p>Tratamento de ossos, músculos e articulações.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====== MÉDICOS ====== -->
+      <section id="medicos" class="medicos">
+        <div class="section-title-bar">👨‍⚕️ Nossos Especialistas</div>
+        <div class="cards">
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400" alt="Dr. João Silva">
+            <h3>Dr. João Silva</h3>
+            <span>Biomédico</span>
+            <p>CRBM 123456</p>
+            <div class="rating">★★★★★</div>
+            <button>Agendar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400" alt="Dra. Carlos Souza">
+            <h3>Dra. Carlos Souza</h3>
+            <span>Pediatra</span>
+            <p>CRM 654321</p>
+            <div class="rating">★★★★★</div>
+            <button>Agendar</button>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400" alt="Dr. Maria Lima">
+            <h3>Dr. Maria Lima</h3>
+            <span>Ortopedista</span>
+            <p>CRM 112233</p>
+            <div class="rating">★★★★★</div>
+            <button>Agendar</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====== CTA ====== -->
+      <section class="cta">
+        <h2>Agende sua consulta agora mesmo</h2>
+        <button onclick="window.open('https://wa.me/5561984175558')">
+          📞 Falar no WhatsApp
+        </button>
+      </section>
+
+    </div><!-- /.content-area -->
+
+    <!-- Status bar -->
+    <div class="statusbar">
+      <span>✔ Concluído</span>
+      <span>🌐 Internet</span>
+      <span>🔒 Site seguro</span>
+    </div>
+
+  </div><!-- /.browser-chrome -->
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Hospital Hub — Todos os direitos reservados &nbsp;|&nbsp; Internet Explorer 6.0</p>
+  </footer>
+
+  <!-- WhatsApp floating button (styled as taskbar tray icon) -->
+  <a href="https://wa.me/5561984175558?text=Ol%C3%A1,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp" target="_blank" title="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+  </a>
+
+  <!-- ====== SCRIPTS ====== -->
+
+  <!-- Loader fade out -->
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      loader.style.opacity = "0";
+      loader.style.transition = "0.4s";
+      setTimeout(() => { loader.style.display = "none"; }, 400);
+    });
+  </script>
+
+  <!-- Active nav on scroll -->
+  <script>
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        if (pageYOffset >= section.offsetTop - 80) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+  <!-- Taskbar clock update -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let h = now.getHours();
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const ampm = h >= 12 ? 'PM' : 'AM';
+      h = h % 12 || 12;
+      const nav = document.querySelector('nav');
+      nav.dataset.time = h + ':' + m + ' ' + ampm;
+      nav.style.setProperty('--clock-time', '"' + h + ':' + m + ' ' + ampm + '"');
+    }
+    updateClock();
+    setInterval(updateClock, 60000);
+  </script>
+
+  <!-- Win2000-style dialog on Agendar buttons -->
+  <script>
+    document.querySelectorAll('.medicos .card button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.card');
+        const name = card.querySelector('h3').textContent;
+        if (confirm('Deseja agendar com ' + name + '?\n\nVocê será redirecionado ao WhatsApp.')) {
+          window.open('https://wa.me/5561984175558');
+        }
+      });
+    });
+  </script>
 
 </body>
-<header>
-    <h1>Hospital hub</h1>
- <nav>
-  <a href="#inicio">Início</a>
-  <a href="#especialidades">Especialidades</a>
-  <a href="#medicos">Médicos</a>
-  <a href="#contato">Contato</a>
-</nav>
-</header>
-
-<section id="inicio" class="hero">
-  <h2>Atendimento médico rápido, seguro e sem filas</h2>
-  <p>Agende sua consulta em minutos com especialistas qualificados</p>
-  
-  <button onclick="window.open('https://wa.me/5561984175558')">
-    Agendar pelo WhatsApp
-  </button>
-
-  <section class="prova">
-  <h2>Mais de 5.000 pacientes atendidos</h2>
-  <p>Excelência e confiança no cuidado com sua saúde</p>
-
-  <section class="diferenciais">
-  <div class="cards">
-    <div class="card">
-      <h3>Atendimento rápido</h3>
-      <p>Sem filas e com agendamento imediato</p>
-    </div>
-
-    <div class="card">
-      <h3>Profissionais qualificados</h3>
-      <p>Médicos experientes e certificados</p>
-    </div>
-
-    <div class="card">
-      <h3>Estrutura moderna</h3>
-      <p>Equipamentos de última geração</p>
-    </div>
-  </div>
-</section>
-
-
-<section id="especialidades" class="especialidades">
-
-  <h2>Nossas Especialidades</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Biomedico</h3>
-      <p>Cuidados com o coração e sistema cardiovascular.</p>
-    </div>
-
-    <div class="card">
-      <h3>Pediatria</h3>
-      <p>Atendimento completo para crianças e adolescentes.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ortopedia</h3>
-      <p>Tratamento de ossos, músculos e articulações.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="medicos" class="medicos">
-
-  <h2>Nossos Especialistas</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54">
-      <h3>Dr. João Silva</h3>
-      <span>Biomedico</span>
-      <p>CRBM 123456</p>
-      <div class="rating">★★★★★</div>
-      <button>Agendar</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d">
-      <h3>Dra. Carlos souza</h3>
-      <span>Pediatra</span>
-      <p>CRM 654321</p>
-      <div class="rating">★★★★★</div>
-      <button>Agendar</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-      <h3>Dr. Maria Lima</h3>
-      <span>Ortopedista</span>
-      <p>CRM 112233</p>
-      <div class="rating">★★★★★</div>
-      <button>Agendar</button>
-    </div>
-
-  </div>
-
-</section>
-
-<script>
-  const elements = document.querySelectorAll('.fade-up');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  elements.forEach(el => observer.observe(el));
-</script>
-<a href="https://wa.me/5561984175558?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta" class="whatsapp" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
-</a>
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    
-    loader.style.opacity = "0";
-    loader.style.transition = "0.5s";
-
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<script>
-tsParticles.load("particles-js", {
-  background: {
-    color: "transparent"
-  },
-  particles: {
-    number: {
-      value: 40
-    },
-    color: {
-      value: "#38bdf8"
-    },
-    links: {
-      enable: true,
-      color: "#38bdf8",
-      distance: 150,
-      opacity: 0.3
-    },
-    move: {
-      enable: true,
-      speed: 1
-    },
-    size: {
-      value: 2
-    },
-    opacity: {
-      value: 0.5
-    }
-  }
-});
-</script>
-<section id="contato" class="contato">
-  <h2>Contato</h2>
-  <p>Fale conosco pelo WhatsApp ou telefone.</p>
-</section>
-<script>
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 100;
-      const sectionHeight = section.clientHeight;
-
-      if (pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + current) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-<script>
-  const header = document.querySelector("header");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-</script>
-</body>
-<section class="cta">
-  <h2>Agende sua consulta agora mesmo</h2>
-  <button onclick="window.open('https://wa.me/5599999999999')">
-    Falar no WhatsApp
-  </button>
-</section>
-
 </html>
- <footer>
-  <p>© 2026 Hospital Hub</p>
-</footer>
